@@ -1,0 +1,98 @@
+# Profile content. Edit this file, then run `python src/build.py`
+# (or just push: the GitHub Action rebuilds the SVGs in assets/).
+
+hero:
+  label: "Baptiste · France"
+  badge: "yexofps.org"
+  name: "Yexo"
+  tagline: ["I edit Valorant clips and keep", "servers running."]
+  worlds_label: "Two profiles, two worlds"
+  worlds:
+    - { name: "Yexo", sub: "Gaming · editing", icon: crosshair }
+    - { name: "Baptiste", sub: "IT infrastructure", icon: server }
+  stats:
+    - { value: "592", label: "presets in YexoFX" }
+    - { value: "11 VM", label: "homelab · 5 machines" }
+    - { value: "10", label: "IT guides, Proxmox to GLPI" }
+    - { value: "2022", label: "editing and homelab since" }
+
+buttons:
+  - { id: tiktok, label: "TikTok", icon: tiktok, primary: true }
+  - { id: site, label: "yexofps.org", icon: globe }
+  - { id: discord, label: "Discord", icon: discord }
+  - { id: contact, label: "Contact", icon: mail }
+
+now:
+  title: "Now"
+  meta: "Updated {month}"   # {month} is replaced by the build month
+  items:
+    - { title: "Work-study IT infrastructure administrator", sub: "IT department · user support, GLPI tickets" }
+    - { title: "Bachelor's in systems, network and database administration", sub: "EPSI Grenoble · 2026 – 2027" }
+    - { title: "Building YexoClip", sub: "Finds my kills in ShadowPlay replays, cuts clean 120 FPS clips" }
+
+projects_heading:
+  title: "Projects"
+  link: "yexofps.org/projects"
+
+projects:
+  - id: yexofx
+    title: "YexoFX"
+    desc: "An After Effects panel built for FPS edits: 592 presets, one click each."
+    status: "Released"
+    meta: "2026 · After Effects extension"
+    visual: curve
+  - id: claimd
+    title: "Claimd"
+    desc: "Is your handle free? Seven platforms checked at once, nothing guessed."
+    status: "Released"
+    meta: "2026 · Web app · Python"
+    visual: handles
+  - id: yexoclip
+    title: "YexoClip"
+    desc: "Finds my kills in ShadowPlay replays and cuts them into clean 120 FPS clips."
+    status: "In development"
+    meta: "2026 · Desktop app"
+    visual: timeline
+  - id: site
+    title: "yexofps.org"
+    desc: "My site: designed, built and self-hosted from scratch."
+    status: "Live"
+    meta: "2026 · Next.js · own VPS"
+    visual: browser
+
+stack:
+  title: "Stack & tools"
+  meta: "infra · code · edit"
+  groups:
+    - name: "Infrastructure"
+      items:
+        - { label: "Windows Server", icon: windows }
+        - { label: "Active Directory", icon: directory }
+        - { label: "Proxmox", icon: proxmox }
+        - { label: "VMware ESXi", icon: box }
+        - { label: "Linux", icon: linux }
+        - { label: "pfSense", icon: pfsense }
+        - { label: "Cisco", icon: router }
+        - { label: "Docker", icon: docker }
+        - { label: "GLPI", icon: ticket }
+        - { label: "Zabbix", icon: pulse }
+    - name: "Code"
+      items:
+        - { label: "Python", icon: python }
+        - { label: "FastAPI", icon: fastapi }
+        - { label: "TypeScript", icon: typescript }
+        - { label: "Next.js", icon: nextdotjs }
+        - { label: "Tailwind CSS", icon: tailwindcss }
+        - { label: "JavaScript", icon: javascript }
+        - { label: "SQLite", icon: sqlite }
+        - { label: "Git", icon: git }
+    - name: "Edit & play"
+      items:
+        - { label: "After Effects", icon: ae }
+        - { label: "Valorant", icon: valorant }
+        - { label: "Counter-Strike 2", icon: counterstrike }
+
+footer:
+  name: "Yexo"
+  text: "IT infrastructure and Valorant video editing."
+  link: "yexofps.org"

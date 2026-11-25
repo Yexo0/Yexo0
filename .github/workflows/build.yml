@@ -1,0 +1,31 @@
+name: Build profile cards
+
+# Rebuilds the SVG cards in assets/ every time src/ changes
+# (for example after editing src/profile.yml on github.com).
+on:
+  push:
+    branches: [main]
+    paths: ["src/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: src/requirements.txt
+      - run: pip install -r src/requirements.txt
+      - run: python src/build.py
+      - name: Commit the new cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git diff --cached --quiet || { git commit -m "Rebuild profile cards"; git push; }
